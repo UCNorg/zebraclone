@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 110 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 110 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 110 10% 15%;
+
+    --primary: 89 35% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 36 19% 55%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 90 5% 90%;
+    --muted-foreground: 110 5% 40%;
+
+    --accent: 110 20% 25%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 110 5% 82%;
+    --input: 110 5% 82%;
+    --ring: 89 35% 40%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 110 10% 15%;
+    --foreground: 0 0% 98%;
+
+    --card: 110 10% 18%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 110 10% 18%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 89 35% 40%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 36 19% 55%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 110 5% 25%;
+    --muted-foreground: 110 5% 70%;
+
+    --accent: 110 20% 30%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 110 5% 30%;
+    --input: 110 5% 30%;
+    --ring: 89 35% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  h5 {
+    @apply text-lg md:text-xl;
+  }
+
+  /* Custom classes for ZebraScapes */
+  .zebra-container {
+    @apply container mx-auto px-4 max-w-7xl;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md hover:bg-accent transition-colors duration-300 inline-flex items-center font-semibold;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-md hover:bg-accent transition-colors duration-300 inline-flex items-center font-semibold;
+  }
+
+  .service-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .service-title {
+    @apply text-lg font-bold text-center py-3 bg-primary text-white;
+  }
+
+  .zebra-section {
+    @apply py-16;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-center;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-semibold mb-4 text-center;
+  }
+
+  .testimonial-card {
+    @apply bg-white p-6 rounded-lg shadow-md;
+  }
+}
